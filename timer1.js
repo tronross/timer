@@ -4,9 +4,9 @@ const times = process.argv.slice(2); // Extract pertinent arguments
 
 // alarmTimes: helper function translates input into timer alarms in ms, excluding negative (and non-)numbers.
 const alarmTimes = function(times) {
-  let alarms = [];
-  for (let time of times) {
-    let alarm = (parseInt(time, 10) * 1000);
+  const alarms = [];
+  for (const time of times) {
+    const alarm = (parseInt(time, 10) * 1000);
     if (Number.isInteger(alarm) && alarm > 0) {
       alarms.push(alarm);
     }
