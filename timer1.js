@@ -1,5 +1,3 @@
-// 'use strict';
-
 const times = process.argv.slice(2);
 let alarms = [];
 
@@ -17,10 +15,8 @@ const timer = function(times) {
   alarms.forEach(alarm => setTimeout(() => {
     process.stdout.write('\x07');
   }, alarm));
-}
+};
 
-
-timer(times);
 
 // console.log(alarms);
 
